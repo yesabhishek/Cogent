@@ -1,0 +1,121 @@
+{% extends "FrontEnd/base.html" %} {% block content %}
+<section>
+  <div class="hero" align="center">
+    <h1>Dashboard</h1>
+    <hr />
+  </div>
+</section>
+<br />
+<section>
+  <div class="hero">
+    <h1>Show Details</h1>
+  </div>
+  <h6>Total Shows: {{TotalDirectors}}</h6>
+
+  <div class="directors">
+    <p>Get all Directors List, <a href="#" class="links">Click here</a></p>
+  </div>
+  <br />
+  <br />
+</section>
+
+<!-- <ol>
+{% for directors in directornames %}
+<li>{{directors}}</li>
+{% endfor %}
+</ol> -->
+
+<section>
+  <div class="hero">
+    <h1>Netflix Programs sorted in Years📺</h1>
+    <hr />
+  </div>
+  <br />
+  <div class="card-deck">
+    <div class="card directors">
+      <div class="card-body">
+        <a class="card-title links" href="#">2008</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2009</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2010</a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="card-deck">
+    <div class="card directors">
+      <div class="card-body">
+        <a class="card-title links" href="#">2011</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2012</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2013</a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="card-deck">
+    <div class="card directors">
+      <div class="card-body">
+        <a class="card-title links" href="#">2014</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2015</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2016</a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="card-deck">
+    <div class="card directors">
+      <div class="card-body">
+        <a class="card-title links" href="#">2017</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2018</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body directors">
+        <a class="card-title links" href="#">2019</a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+</section>
+
+<br />
+<section>
+  <div class="hero">
+    <h1>Growth of Netlfix per year</h1>
+    <hr />
+  </div>
+  <p>Coming soon!</p>
+  <br />
+  <br />
+</section>
+<br />
+<br />
+{% endblock %}

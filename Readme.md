@@ -1,23 +1,26 @@
 # Cogent🚀 [![GitHub stars](https://img.shields.io/github/stars/yesabhishek/Cogent)](https://github.com/yesabhishek/Cogent/stargazers) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-## Best way to Analyze your Data. 
+## Best way to Analyze your Data.
 
-<p align="center">
+It's a Data Analysis Dashboard for understanding and visualising Data. Using Chart Js, Data has been represented on Graphs/ Charts etc.
+Since Data is the most important entity of today's world and who has the most users can understand the business and can predict the future. We at Cogent are just 1% of that vision. Our Motto is to take user data and provide them a legit and relevant understanding of it.
 
-</p>
+It can boost sales, or help you make a business decision in seconds. Most of the Data which is being captured by our Tech Industry is junk and takes too much brain energy and time to understand. That's exactly where we come in handy.
 
-You can clone the repo and have fun with the tech.. The whole project has been kept **open** so that anyone can utilize it and make their own flavour out of it.
+## Check out! [here](https://cogent.herokuapp.com/)⚡
 
-But if you want to **contribute** and make this a much better platform, Please have a look at [Issues](https://github.com/yesabhishek/Cogent/issues).
+## Want to Contribute💁‍♂️💁‍♀️
+
+If you want to **contribute** and make this a much better platform, Please have a look at [Issues](https://github.com/yesabhishek/Cogent/issues) or the To-Do List
+below 👇
 
 If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/yesabhishek/Cogent/pulls).
 
-## Check out! [here](https://cogent.herokuapp.com/)⚡
 ## Features🔥
 
 ✔️ Easy and minimalistic UI\
 ✔️ With Chart JS, visualizing data is made clear to understand\
-✔️ Realtime Analysis\
+✔️ Real Time Analysis\
 ✔️ Dashboard to view different Datasets and Analytics\
 ✔️ Updated with fresh
 
@@ -49,7 +52,7 @@ $ cd Dashboard
 $ python manage.py runserver
 ```
 
-## For the Future 🚩
+## To-Do List📃
 
 If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/yesabhishek/Cogent/pulls).
 
@@ -61,7 +64,7 @@ If you can help us with these. Please don't hesitate to open a [pull request](ht
 
 - Download feature, to easy download the graph/charts
 
-- Add a newsletter feature, So that people can subscribe to a particular Dataset and everytime there is an update. The respective user can get a notification as well a Analysis on their Mail Id itself.
+- Add a newsletter feature, So that people can subscribe to a particular Dataset and everytime there is an update. The respective user can get a notification as well an Analysis on their Mail Id itself.
 
 ## Project Maintainers 🚧
 

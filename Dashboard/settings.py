@@ -5,7 +5,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = 'baf011806584e5915bef64c3b223217ac816e51105541666'
+SECRET_KEY = os.environ.get('COGENT_KEY')
 
 DEBUG = True
 

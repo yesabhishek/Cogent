@@ -1,6 +1,6 @@
 
 import os
-import django_heroku
+
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -17,7 +17,6 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'svg',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FrontEnd',
@@ -92,4 +91,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 
-django_heroku.settings(locals())

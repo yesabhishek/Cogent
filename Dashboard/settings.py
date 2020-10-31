@@ -1,6 +1,6 @@
 
 import os
-
+import django_heroku
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'svg',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'FrontEnd.apps.FrontEndConfig',
+    'FrontEnd',
 ]
 
 MIDDLEWARE = [
@@ -38,7 +38,7 @@ ROOT_URLCONF = 'Dashboard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':  [os.path.join(BASE_DIR, 'templates')],
+        'DIRS':  [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,3 +91,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
+
+django_heroku.settings(locals())

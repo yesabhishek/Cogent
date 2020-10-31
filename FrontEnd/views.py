@@ -12,7 +12,7 @@ currdate = currentdate.strftime("%m"+"/"+"%d"+"/"+"%y")
 prevd = prevdate.strftime("%m"+"/"+"%d"+"/"+"%y")
 todaydate = today.strftime("%d %b, %Y")
 
-raw_data = pd.read_csv('https://raw.githubusercontent.com/yesabhishek/Confluence/master/Extracted/netflix_titles.csv',
+raw_data = pd.read_csv('https://raw.githubusercontent.com/yesabhishek/Cogent/master/Extracted/netflix_titles.csv',
                        encoding='utf-8', na_values=None).dropna()
 raw_data = raw_data.dropna()
 directorlist = []

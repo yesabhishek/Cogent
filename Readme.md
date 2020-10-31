@@ -1,6 +1,6 @@
-# Confluence🚀 [![GitHub stars](https://img.shields.io/github/stars/yesabhishek/Confluence)](https://github.com/yesabhishek/Confluence/stargazers) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+# Cogent🚀 [![GitHub stars](https://img.shields.io/github/stars/yesabhishek/Cogent)](https://github.com/yesabhishek/Cogent/stargazers) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-## Best way to Analyze your Data.
+## Best way to Analyze your Data. 
 
 <p align="center">
 
@@ -8,10 +8,11 @@
 
 You can clone the repo and have fun with the tech.. The whole project has been kept **open** so that anyone can utilize it and make their own flavour out of it.
 
-But if you want to **contribute** and make this a much better platform, Please have a look at [Issues](https://github.com/yesabhishek/Confluence/issues).
+But if you want to **contribute** and make this a much better platform, Please have a look at [Issues](https://github.com/yesabhishek/Cogent/issues).
 
-If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/yesabhishek/Confluence/pulls).
+If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/yesabhishek/Cogent/pulls).
 
+## Check out! [here](https://cogent.herokuapp.com/)⚡
 ## Features🔥
 
 ✔️ Easy and minimalistic UI\
@@ -39,10 +40,10 @@ From your command line, clone and run Yes Network:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/yesabhishek/Confluence.git
+$ git clone https://github.com/yesabhishek/Cogent.git
 
 # Go into the repository
-$ cd Confluence/Dashboard
+$ cd Dashboard
 
 #Start's development server
 $ python manage.py runserver
@@ -50,7 +51,7 @@ $ python manage.py runserver
 
 ## For the Future 🚩
 
-If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/yesabhishek/Confluence/pulls).
+If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/yesabhishek/Cogent/pulls).
 
 - Add more datasets to perform Analysis.
 

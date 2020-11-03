@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FrontEnd',
-    'svg'
+    'svg',
 ]
 
 MIDDLEWARE = [

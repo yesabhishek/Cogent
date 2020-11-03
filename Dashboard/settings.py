@@ -8,7 +8,7 @@ SECRET_KEY = "baf011806584e5915bef64c3b223217ac816e51105541666"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['cogent.herokuapp.com']
+ALLOWED_HOSTS = []
 
 SVG_DIRS = [
     os.path.join(BASE_DIR, 'FrontEnd\\static\\FrontEnd\\svg')
@@ -97,4 +97,5 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

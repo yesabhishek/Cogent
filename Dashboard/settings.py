@@ -11,6 +11,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['cogent.herokuapp.com']
 
+SVG_DIRS=[
+    os.path.join(BASE_DIR, 'FrontEnd\\static\\FrontEnd\\svg')
+]
+""" 
+print(SVG_DIRS)
+exit(0) """
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -20,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'FrontEnd',
+    'svg'
 ]
 
 MIDDLEWARE = [

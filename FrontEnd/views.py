@@ -8,7 +8,7 @@ from datetime import timedelta
 today = datetime.datetime.now()
 currentdate = datetime.datetime.now() - datetime.timedelta(days=1)
 prevdate = datetime.datetime.now() - datetime.timedelta(days=2)
-currdate = currentdate.strftime("%m"+"/"+"%d"+"/"+"%y")
+#currdate = currentdate.strftime("%m"+"/"+"%d"+"/"+"%y")
 prevd = prevdate.strftime("%m"+"/"+"%d"+"/"+"%y")
 todaydate = today.strftime("%d %b, %Y")
 
@@ -44,11 +44,11 @@ def covid(request):
                         encoding='utf-8', na_values=None).fillna('')
     df3 = pd.read_json(
         'https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/world-population-density.json')
-    dfCon.sort_values(by=currdate, ascending=False).head(10)
-    TopTen = dfCon.sort_values(by=currdate, ascending=False).head(10)
+    dfCon.sort_values(by='11/2/20', ascending=False).head(10)
+    TopTen = dfCon.sort_values(by='11/2/20', ascending=False).head(10)
     CountryList = TopTen['Country/Region']
-    TotalCountryCases = TopTen[currdate]
-    DailyConfirmed = TopTen[currdate] - TopTen[prevd]
+    TotalCountryCases = TopTen['11/2/20']
+    DailyConfirmed = TopTen['11/2/20'] - TopTen['11/1/20']
 
     confirmedGlobal = pd.read_csv(
         'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', encoding='utf-8', na_values=None)

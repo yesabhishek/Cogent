@@ -15,17 +15,11 @@
   href="{% static 'FrontEnd/css/header.css' %}"
 />
 <link
+  href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
   rel="stylesheet"
-  type="text/css"
-  href="{% static 'FrontEnd/css/particles.css' %}"
 />
-
 <!-- Favicon icons below -->
 
-<script
-  src="https://kit.fontawesome.com/864c08f8dd.js"
-  crossorigin="anonymous"
-></script>
 <!-- Bootstrap CSS -->
 <link
   rel="stylesheet"
@@ -37,6 +31,7 @@
   href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Montserrat:wght@500&display=swap"
   rel="stylesheet"
 />
+<script src="{% static 'FrontEnd/js/func.js' %}"></script>
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -55,10 +50,24 @@
   href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<link rel="apple-touch-icon" sizes="180x180" href="{% static 'FrontEnd/images/apple-touch-icon.png' %}">
-<link rel="icon" type="image/png" sizes="32x32" href="{% static 'FrontEnd/images/favicon-32x32.png' %}">
-<link rel="icon" type="image/png" sizes="16x16" href="{% static 'FrontEnd/images/favicon-16x16.png' %}">
-
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="{% static 'FrontEnd/images/apple-touch-icon.png' %}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{% static 'FrontEnd/images/favicon-32x32.png' %}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{% static 'FrontEnd/images/favicon-16x16.png' %}"
+/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,29 +76,27 @@
   </head>
   <body data-theme="light" class="body">
     <!-- Navbar code starts here -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top header">
-      <a class="navbar-brand logo" href="{% url 'Home' %}">Cogent </a>
+    <nav class="navbar navbar-expand-lg navbar-light header">
+      <a class="navbar-brand logo alink" href="{% url 'Home' %}">Cogent </a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarText"
-        aria-controls="navbarText"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ml-auto menu">
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto menu ">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'Home' %}"
-              ><i class="fas fa-home"></i> Home</a
-            >
+            <a class="nav-link header r-link link text-underlined" href="{% url 'Home' %}">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              class="nav-link dropdown-toggle header"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -109,14 +116,10 @@
             </div>
           </li>
           <li>
-            <a class="nav-link" href="#about"
-              ><i class="far fa-question-circle"></i> About</a
-            >
+            <a class="nav-link header" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact"
-              ><i class="fas fa-user-plus"></i> Contact Us</a
-            >
+            <a class="nav-link header" href="#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -125,8 +128,6 @@
 
     <br />
     <br />
-
-   
 
     <main role="main" class="container">
       {% block content %} {% endblock %}

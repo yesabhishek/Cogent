@@ -29,7 +29,6 @@ html {
 .nheading {
   font-family: "Montserrat", sans-serif;
   font-size: 3.2rem;
-  
 }
 
 :root {
@@ -58,7 +57,6 @@ html {
 }
 
 .aalink {
-
   color: rgb(207, 102, 63);
   text-decoration: none;
 }
@@ -68,49 +66,53 @@ html {
   color: rgb(255, 0, 0);
 }
 
-
-
-
-.sal{
- 
+.sal {
   font-family: "Vampiro One", cursive;
 }
 
-
-.r-link{
-	display: var(--rLinkDisplay, inline-flex) !important;
+.r-link {
+  display: var(--rLinkDisplay, inline-flex) !important;
 }
 
-.r-link[href]{
-	color: var(--rLinkColor) !important;
-	text-decoration: var(--rLinkTextDecoration, none) !important;
+.r-link[href] {
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
 }
 
-.text-underlined{
-    /*
+.text-underlined {
+  /*
         1. I use pixels units because others units (em, rem, vw, vh, etc) can
         lead to the mistake of displaying a circumcised line
     */
 
-    --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
-    --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
-    --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+  --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+  --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, 0.5rem);
+  --uiTextUnderlinedPaddingBottom: calc(
+    var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap)
+  );
 
-    padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
-    position: var(--textUnderlinedPosition, relative) !important;
-		z-index: var(--textUnderlinedZindex, 1) !important;
+  padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+  position: var(--textUnderlinedPosition, relative) !important;
+  z-index: var(--textUnderlinedZindex, 1) !important;
 }
 
-.text-underlined::after{
-    content: "";
-    width: var(--textUnderlinedLineWidht, 100%) !important;
-    height: var(--uiTextUnderlinedLineHeight) !important;
-		background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(0, 0, 0, 0) 45%)) !important;
+.text-underlined::after {
+  content: "";
+  width: var(--textUnderlinedLineWidht, 100%) !important;
+  height: var(--uiTextUnderlinedLineHeight) !important;
+  background-image: var(
+    --textUnderlinedBackgroundImage,
+    linear-gradient(
+      to top,
+      var(--textUnderlinedLineColor, currentColor) 30%,
+      rgba(0, 0, 0, 0) 45%
+    )
+  ) !important;
 
-    position: absolute;
-    left: var(--textUnderlinedLineLeft, 0) !important;
-    bottom: var(--textUnderlinedLineBottom, 0) !important;
-		z-index: var(--textUnderlinedLineZindex, -1) !important;
+  position: absolute;
+  left: var(--textUnderlinedLineLeft, 0) !important;
+  bottom: var(--textUnderlinedLineBottom, 0) !important;
+  z-index: var(--textUnderlinedLineZindex, -1) !important;
 }
 
 /*
@@ -119,42 +121,42 @@ CORE
 =====
 */
 
-.link{
-	--textUnderlinedLineHeight: 100%;
-	--textUnderlinedLineGap: 0;
-	--textUnderlinedLineColor: #fed330;
-	
-	padding-left: .75rem;
-	padding-right: .75rem;
+.link {
+  --textUnderlinedLineHeight: 100%;
+  --textUnderlinedLineGap: 0;
+  --textUnderlinedLineColor: #fed330;
+
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
-.link::after{
-	will-change: width;
-	transition: width .1s ease-out;
-	transform: rotate(-2deg);
-	transform-origin: left bottom;
+.link::after {
+  will-change: width;
+  transition: width 0.1s ease-out;
+  transform: rotate(-2deg);
+  transform-origin: left bottom;
 }
 
-.link:hover{
-	--textUnderlinedLineWidht: 0;
+.link:hover {
+  --textUnderlinedLineWidht: 0;
 }
 
-.link:hover::after{
-	transition-duration: .15s;
+.link:hover::after {
+  transition-duration: 0.15s;
 }
 
 /*
 * These styles for text decoration. The demo will be work without it
 */
 
-.link{
-	font-weight: 700;
-	text-transform: uppercase;
+.link {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.link:focus{
-	outline: 2px solid #fed330;
-	outline-offset: .5rem;
+.link:focus {
+  outline: 2px solid #fed330;
+  outline-offset: 0.5rem;
 }
 
 /*
@@ -163,9 +165,8 @@ DEMO
 =====
 */
 
-:root{
-	--rLinkColor: #222;
+:root {
+  --rLinkColor: #222;
 }
-
 
 /* Look here */

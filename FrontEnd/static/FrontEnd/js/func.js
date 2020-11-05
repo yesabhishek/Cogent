@@ -20,3 +20,5 @@ $('a').click(function(e) {
       $('.card-front').toggleClass('card-flip');
       $('.card-back').toggleClass('card-flip');
     });
+
+var rellax = new Rellax('.rellax');

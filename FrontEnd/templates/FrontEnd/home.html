@@ -1,29 +1,35 @@
-{% extends "FrontEnd/base.html" %} {% block content %}
-<br />
-<br />
+{% extends "FrontEnd/base.html" %} {% block content %} {% load static %}
+<br /><br />
 
 <section>
-  <h1 align="center" class="heading">
-    Welcome to Cogent!<span class="wave-emoji">👋</span>
-  </h1>
-  <br />
-  <br />
-  <h3 align="center">
-    We analyze Data, consult clients and help them visualize their
-    boring data. We assist them and help them decide where to invest the money with our
-    smart Data Analysis tools⚡
-  </h3>
-  <br /><br />
-  <h5 align="center">
-    Today Data is the most important entity in the world and it's estimated that
-    the Data will grow to an outrageous extent. Now, the one who can utilize
-    this Data to fuel their own buisness will grow extraordinary.
-  </h5>
+  <div class="rellax" data-rellax-speed="7">
+    <h1 align="center" class="heading">
+      Welcome to Cogent!<span class="wave-emoji">👋</span>
+    </h1>
+    <br />
+    <br />
+    <h3 align="center">
+      We analyze Data, consult clients and help them visualize their boring
+      data. We assist them and help them decide where to invest the money with
+      our smart Data Analysis tools⚡
+    </h3>
+    <br /><br />
+    <h5 align="center">
+      Today Data is the most important entity in the world and it's estimated
+      that the Data will grow to an outrageous extent. Now, the one who can
+      utilize this Data to fuel their own buisness will grow extraordinary.
+    </h5>
+  </div>
 </section>
-
-<br /><br /><br /><br /><br /><br /><br /><br />
-<section id=about>
-  <div  align="center">
+<br /><br />
+<br />
+<br />
+<br /><br /><br />
+<br />
+<br />
+<br />
+<section id="about">
+  <div align="center">
     <h1 class="nheading">About</h1>
     <hr />
   </div>
@@ -57,11 +63,10 @@
         alt="..."
       />
       <div class="card-body">
-        
         <h5 class="card-text">
           We are group of highly enthusiast Engineers who gives their full
           potential on our projects.
-        </>
+        </h5>
         <p class="card-text"></p>
       </div>
     </div>
@@ -78,7 +83,6 @@
     </div>
     <div class="card text-center">
       <div class="card-body">
-        
         <h5 class="card-text">
           We use industry leading tech stack and always keep updated with
           standards, So that we can move on with our Data fast.
@@ -116,20 +120,29 @@
     </div>
   </div>
 </section>
-<br /><br /><br /><br />
-
-<section id=contact>
-  <div  align="center">
+<br /><br />
+<br />
+<br />
+<br />
+<section id="contact">
+  <div align="center">
     <h1 class="nheading">Contact Us</h1>
     <hr />
   </div>
   <br />
   <h4>Drop me an e-mail at :</h4>
   <small>choudhuryabhishek76@gmail.com</small>
-  
-  <br />
-  <br />
-  
 </section>
-<br /><br /><br /><br />
+<br /><br />
+<br />
+<br />
+<br />
+<script>
+  var rellax = new Rellax(".rellax");
+</script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"
+  integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ=="
+  crossorigin="anonymous"
+></script>
 {% endblock %}

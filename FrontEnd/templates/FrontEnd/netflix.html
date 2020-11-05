@@ -13,7 +13,7 @@
   <h6>Total Shows: {{TotalDirectors}}</h6>
 
   <div class="directors">
-    <p>Get all Directors List, <a href="#" class="aalink">Click here</a></p>
+    <!--  <p>Get all Directors List, <a href="#" class="aalink">Click here</a></p> -->
   </div>
   <br />
   <br />
@@ -25,97 +25,283 @@
 {% endfor %}
 </ol> -->
 
-<section>
-  <div class="nheading">
-    <h1>Netflix Programs sorted in Years📺</h1>
-    <hr />
-  </div>
-  <br />
-  <div class="card-deck">
-    <div class="card directors">
-      <div class="card-body">
-        <a class="card-title aalink" href="#">2008</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2009</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2010</a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="card-deck">
-    <div class="card directors">
-      <div class="card-body">
-        <a class="card-title aalink" href="#">2011</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2012</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2013</a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="card-deck">
-    <div class="card directors">
-      <div class="card-body">
-        <a class="card-title aalink" href="#">2014</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2015</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2016</a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="card-deck">
-    <div class="card directors">
-      <div class="card-body">
-        <a class="card-title aalink" href="#">2017</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2018</a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body directors">
-        <a class="card-title aalink" href="#">2019</a>
-      </div>
-    </div>
-  </div>
-  <br />
-  <br />
-</section>
-
 <br />
 <section>
   <div class="nheading">
     <h1>Growth of Netlfix per year</h1>
     <hr />
   </div>
-  <p>Coming soon!</p>
+  <canvas id="myChart" width="400" height="180"></canvas>
+  <script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["2015", "2016", "2017", "2018", "2019"],
+        datasets: [
+          {
+            label: "Growth of Netflix",
+            data: [27.4, 41.2, 57.8, 80.8, 106.8],
+            backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+            borderColor: ["rgba(255, 99, 132, 1)"],
+            borderWidth: 2.5,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  </script>
   <br />
   <br />
 </section>
 <br />
 <br />
-{% endblock %}
+<section>
+  <div class="nheading">
+    <h1>Frequency of Users on Netflix</h1>
+    <hr />
+  </div>
+  <canvas id="frequency" width="400" height="180"></canvas>
+  <script>
+    var ctx = document.getElementById("frequency");
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [
+          "A few times a week",
+          "A few times a month	",
+          "A few times a year	",
+          "I dont use this service",
+          "I dont use this service yet, but I am planning",
+        ],
+        datasets: [
+          {
+            label: "Frequency",
+            data: [46, 26, 14, 11, 13],
+            backgroundColor: [
+              "rgba(255,0,255,0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(255,0,255,1)",
+            ],
+            borderWidth: 1.5,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      },
+    });
+  </script>
+</section>
+<br /><br />
+<section>
+  <div class="nheading">
+    <h1>Netflix Vs Other Steaming Sites</h1>
+    <hr />
+    <br />
+  </div>
+  <canvas id="netlixvs" width="400" height="180"></canvas>
+  <script>
+    var ctx = document.getElementById("netlixvs");
+    var myChart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: ["Youtube", "Netflix", "Amazon Prime", "Hulu", "HBO Now"],
+        datasets: [
+          {
+            label: "market Share",
+            data: [192.0, 147.5, 88.7, 55.0, 17.1],
+            backgroundColor: [
+              "rgba(0,51,255,0.2)",
+
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+              "rgba(255,0,0,0.2)",
+            ],
+            borderColor: [
+              "rgba(0,51,255,1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+              "rgba(255,0,0,1)",
+            ],
+            borderWidth: 1.5,
+          },
+        ],
+      },
+      options: {},
+    });
+  </script>
+  <br /><br />
+  <br /><br />
+  <section>
+    <div class="nheading">
+      <h1>Viewership</h1>
+      <hr />
+    </div>
+    <canvas id="vship" width="400" height="180"></canvas>
+    <script>
+      var ctx = document.getElementById("vship");
+      var myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "18-24 Years",
+            "25-34 Years",
+            "35-44 Years",
+            "45-54 Years",
+            "55-64 Years",
+            "65+ Years",
+          ],
+          datasets: [
+            {
+              label: "Viewership in percentages",
+              data: [12, 18, 18, 19, 16, 17],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1.5,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+    <br /><br />
+    <br /><br />
+    <section>
+      <div class="nheading">
+        <h1>Netflix Programs sorted in Years📺</h1>
+        <hr />
+      </div>
+      <small>Coming Soon!</small>
+      <br />
+      <div class="card-deck">
+        <div class="card directors">
+          <div class="card-body">
+            <a class="card-title aalink" href="#">2008</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2009</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2010</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="card-deck">
+        <div class="card directors">
+          <div class="card-body">
+            <a class="card-title aalink" href="#">2011</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2012</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2013</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="card-deck">
+        <div class="card directors">
+          <div class="card-body">
+            <a class="card-title aalink" href="#">2014</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2015</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2016</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="card-deck">
+        <div class="card directors">
+          <div class="card-body">
+            <a class="card-title aalink" href="#">2017</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2018</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body directors">
+            <a class="card-title aalink" href="#">2019</a>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+
+    {% endblock %}
+  </section>
+</section>

@@ -1,0 +1,49 @@
+.nav-container {
+  background-color: transparent;
+}
+
+.nav-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3.5rem;
+}
+
+header .logo {
+  color: #00E0FF;
+  font-weight: bolder;
+  font-size: 54px;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 22px;
+}
+
+header nav ul a {
+  display: block;
+  padding: 0 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=header.css.map */

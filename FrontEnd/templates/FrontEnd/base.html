@@ -7,31 +7,15 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'FrontEnd/css/covid.css' %}"
+  href="{% static 'FrontEnd/css/bootstrap.css' %}"
 />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'FrontEnd/css/header.css' %}"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Knewave&display=swap"
-  rel="stylesheet"
-/>
-<!-- Favicon icons below -->
 
-<!-- Bootstrap CSS -->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-  crossorigin="anonymous"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&family=Montserrat:wght@500&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,600&family=Poppins:ital,wght@0,700;1,600&display=swap"
   rel="stylesheet"
 />
-<script src="{% static 'FrontEnd/js/func.js' %}"></script>
+
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -40,10 +24,7 @@
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
-<link
-  href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap"
-  rel="stylesheet"
-/>
+
 <link
   rel="stylesheet"
   type="text/css"
@@ -53,31 +34,33 @@
 <link
   rel="apple-touch-icon"
   sizes="180x180"
-  href="{% static 'FrontEnd/images/apple-touch-icon.png' %}"
+  href="{% static 'FrontEnd/images/logomedium.png' %}"
 />
 <link
   rel="icon"
   type="image/png"
   sizes="32x32"
-  href="{% static 'FrontEnd/images/favicon-32x32.png' %}"
+  href="{% static 'FrontEnd/images/logosmall.png' %}"
 />
 <link
   rel="icon"
   type="image/png"
   sizes="16x16"
-  href="{% static 'FrontEnd/images/favicon-16x16.png' %}"
+  href="{% static 'FrontEnd/images/logoextrasmall.png' %}"
 />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Cogent</title>
   </head>
-  <body data-theme="light" class="body">
+  <body data-theme="light">
     <!-- Navbar code starts here -->
-    <nav class="navbar navbar-expand-lg navbar-light header">
-      <a class="navbar-brand logo alink" href="{% url 'Home' %}">Cogent </a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand logo alink light" href="{% url 'Home' %}"
+        >Cogent
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -90,9 +73,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto menu ">
+        <ul class="navbar-nav ml-auto menu">
           <li class="nav-item">
-            <a class="nav-link header r-link link text-underlined" href="{% url 'Home' %}">Home</a>
+            <a class="nav-link" href="{% url 'Home' %}">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -115,11 +98,10 @@
               >
             </div>
           </li>
-          <li>
-            <a class="nav-link header" href="#about">About</a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link header" href="#contact">Contact Us</a>
+            <a class="nav-link header" href="https://github.com/yesabhishek"
+              >GitHub</a
+            >
           </li>
         </ul>
       </div>
@@ -129,9 +111,7 @@
     <br />
     <br />
 
-    <main role="main" class="container">
-      {% block content %} {% endblock %}
-    </main>
+    {% block content %} {% endblock %}
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

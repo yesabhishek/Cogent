@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = "baf011806584e5915bef64c3b223217ac816e51105541666"
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cogent.herokuapp.com']
 # 'cogent.herokuapp.com'

@@ -1,142 +1,51 @@
 {% extends "FrontEnd/base.html" %} {% block content %} {% load static %}
-<br /><br />
-
+<section id="hero">
+  <div class="herodiv">
+    {% load static %}
+    <img
+      class="heroimg"
+      src="{% static 'FrontEnd/images/svg/herotitle.svg' %}"
+    />
+  </div>
+  <div class="contact">
+    <a href="https://www.linkedin.com/in/yesabhishek/"
+      ><img
+        class="contactimg"
+        src="{% static 'FrontEnd/images/svg/contact.svg' %}"
+    /></a>
+  </div>
+</section>
+<br /> <br /> <br /> <br /> <br /> <br />
 <section>
-  <div class="rellax" data-rellax-speed="7">
-    <h1 align="center" class="heading">
-      Welcome to Cogent!<span class="wave-emoji">👋</span>
-    </h1>
+  <div class="page container">
+    <div class="wrap">
+      <h1>About</h1>
+      <br />
+      <div class="aboutpara">
+        <p class="first">What we actually do with the Data?</p>
+        <p class="second">Well, below are the steps in brief.</p>
+      </div>
+      <br />
+      <img class="cards" src="{% static 'FrontEnd/images/svg/cards.svg' %}" />
+    </div>
+  </div>
+</section>
+
+<div class="page container">
+  <div class="left">
+    <h3>Data VISUALIZATION</h3>
     <br />
-    <br />
-    <h3 align="center">
-      We analyze Data, consult clients and help them visualize their boring
-      data. We assist them and help them decide where to invest the money with
-      our smart Data Analysis tools⚡
-    </h3>
-    <br /><br />
-    <h5 align="center">
-      Today Data is the most important entity in the world and it's estimated
-      that the Data will grow to an outrageous extent. Now, the one who can
-      utilize this Data to fuel their own buisness will grow extraordinary.
-    </h5>
+    <h3>Data ANALYTICS</h3>
   </div>
-</section>
-<br /><br />
-<br />
-<br />
-<br /><br /><br />
-<br />
-<br />
-<br />
-<section id="about">
-  <div align="center">
-    <h1 class="nheading">About</h1>
-    <hr />
+  <div class="vl"></div>
+  <div class="right">
+    <img class="toolsimg" src="{% static 'FrontEnd/images/svg/tools.svg' %}" />
   </div>
-  <br />
-  <div class="card-columns">
-    <div class="card">
-      <img
-        src="https://images.pexels.com/photos/2517950/pexels-photo-2517950.jpeg?cs=srgb&dl=pexels-nishant-aneja-2517950.jpg&fm=jpg"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-text">
-          Our analysis helps our clients make decision and makes them as happy
-          and satisfied as the kid in the gif
-        </h5>
-      </div>
-    </div>
-    <div class="card p-3">
-      <blockquote class="blockquote mb-0 card-body">
-        <p>'Without data, you’re just another person with an opinion'.</p>
-        <footer class="blockquote-footer">
-          <small class="text-muted"> W. Edwards Deming </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <img
-        src="https://www.thenational.ae/image/policy:1.637682:1506083461/image/jpeg.jpg?f=16x9&w=1200&$p$f$w=dfa40e8"
-        class="card-img-top"
-        alt="..."
-      />
-      <div class="card-body">
-        <h5 class="card-text">
-          We are group of highly enthusiast Engineers who gives their full
-          potential on our projects.
-        </h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-    <div class="card bg-primary text-white text-center p-3">
-      <blockquote class="blockquote mb-0">
-        <p>
-          “Without big data, you are blind and deaf and in the middle of a
-          freeway.
-        </p>
-        <footer class="blockquote-footer text-white">
-          <small> Geoffrey Moore </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card text-center">
-      <div class="card-body">
-        <h5 class="card-text">
-          We use industry leading tech stack and always keep updated with
-          standards, So that we can move on with our Data fast.
-        </h5>
-        <p class="card-text"></p>
-      </div>
-    </div>
-    <div class="card">
-      <img
-        src="https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg?cs=srgb&dl=pexels-photomix-company-95916.jpg&fm=jpg"
-        class="card-img-top"
-        alt="..."
-      />
-    </div>
-    <div class="card p-3 text-right">
-      <blockquote class="blockquote mb-0">
-        <p>
-          “If we have data, let’s look at data. If all we have are opinions,
-          let’s go with mine.”
-        </p>
-        <footer class="blockquote-footer">
-          <small class="text-muted"> Jim Barksdale </small>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Fast and Secure</h5>
-        <p class="card-text">
-          We analyze the data in the most secure and efficent way which gives us
-          a time boost than any other products on the market.
-        </p>
-        <p class="card-text"></p>
-      </div>
-    </div>
-  </div>
-</section>
-<br /><br />
-<br />
-<br />
-<br />
-<section id="contact">
-  <div align="center">
-    <h1 class="nheading">Contact Us</h1>
-    <hr />
-  </div>
-  <br />
-  <h4>Drop me an e-mail at :</h4>
-  <small>choudhuryabhishek76@gmail.com</small>
-</section>
-<br /><br />
-<br />
-<br />
-<br />
+</div>
+
+<div class="footer">
+  <img src="{% static 'FrontEnd/images/svg/footer.svg' %}" />
+</div>
 <script>
   var rellax = new Rellax(".rellax");
 </script>

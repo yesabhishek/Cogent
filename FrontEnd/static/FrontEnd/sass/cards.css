@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 .container {
   -webkit-perspective: 2500px;
-  perspective: 2500px;
+          perspective: 2500px;
 }
 
 .card {
@@ -13,25 +13,23 @@
   margin: 3em auto;
   border-radius: 0.2em;
   -webkit-box-shadow: 0 2.5em 0.9em -2em #555;
-  box-shadow: 0 2.5em 0.9em -2em #555;
+          box-shadow: 0 2.5em 0.9em -2em #555;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   overflow: hidden;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.8s
-    cubic-bezier(0.63, -0.32, 0.4, 1.39);
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
   transition: -webkit-transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
   transition: transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
-  transition: transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39),
-    -webkit-transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
+  transition: transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39), -webkit-transform 0.8s cubic-bezier(0.63, -0.32, 0.4, 1.39);
 }
 
 .card-flip {
   -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .initials {
@@ -42,7 +40,7 @@
   font-weight: 500;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   position: relative;
   text-align: center;
   border-bottom: 1px solid #fb0044;
@@ -57,19 +55,19 @@
 
 .initial-1 {
   -webkit-transform: translateX(-80%);
-  transform: translateX(-80%);
+          transform: translateX(-80%);
 }
 
 .initial-2 {
   color: #05aefc;
   -webkit-transform: translateX(-255%);
-  transform: translateX(-255%);
+          transform: translateX(-255%);
 }
 
 .initials-3 {
   color: #09fc83;
   -webkit-transform: translateX(-305%);
-  transform: translateX(-305%);
+          transform: translateX(-305%);
 }
 
 .desc {
@@ -159,10 +157,10 @@ hr {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+          transform: translateX(-50%);
   top: 1em;
   -webkit-animation: fade 3s infinite ease-in-out;
-  animation: fade 3s infinite ease-in-out;
+          animation: fade 3s infinite ease-in-out;
 }
 
 @-webkit-keyframes fade {

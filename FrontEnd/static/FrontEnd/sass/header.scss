@@ -1,0 +1,39 @@
+.nav-container {
+  background-color: transparent;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem;
+
+  .logo {
+    color: #00E0FF;
+    font-weight: bolder;
+    font-size: 54px;
+  }
+
+  nav {
+    float: right;
+
+    ul {
+      display: flex;
+      font-size: 22px;
+      a {
+        display: block;
+        padding: 0 2em;
+        justify-content: center;
+      }
+    }
+  }
+}

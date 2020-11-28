@@ -1,172 +1,153 @@
-h1 {
-  font-size: 3.5rem;
-}
-,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: 3px;
-}
-,
-h6 {
-  color: #444444;
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 0.25rem;
 }
 
-ul {
-  margin: 0;
+body::-webkit-scrollbar-track {
+  background-color: black;
 }
 
-html {
-  scroll-behavior: smooth;
+body::-webkit-scrollbar-thumb {
+  background-color: #00e0ff;
+}
+/* Scrollbar */
+
+/* Hero Section */
+
+.hero {
+  height: 100vh;
+}
+.heroimg {
+  width: 100%;
+  max-width: 1150px;
+  left: 114px;
+  top: 220px;
+  align-content: left;
+}
+@media screen and (max-width: 480px) and (min-width: 100px) {
+  .heroimg {
+    margin-left: 0%;
+  }
 }
 
-.heading {
-  font-family: "Vampiro One", cursive;
-  font-size: 5.5rem;
+.contactimg {
+  position: relative;
+  width: 100%;
+  max-width: 202.5px;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
 }
 
-.nheading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 3.2rem;
+/* Hero Section */
+
+/* About */
+.aboutpara {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 2px;
 }
 
-:root {
-  --mainColor: #ff9800;
+.second {
+  padding-left: 1.5%;
+  color: #00e0ff;
 }
 
-.alink {
-  background: linear-gradient(
-    to bottom,
-    var(--mainColor) 0%,
-    var(--mainColor) 100%
-  );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 3px 3px;
-  color: orangered;
-  text-decoration: none;
+.cards {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  max-width: 1186px;
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
 
-.alink:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 100%;
-  background-size: auto 6px;
-  background-repeat: repeat-x;
-  text-decoration: none;
+.page {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  position: relative;
+  display: flex;
+  
+}
+/* About */
+
+/* Bottom */
+
+.toolsimg {
+  width: 100%;
+  max-width: 389px;
+  justify-content: center;
+  align-items: center;
+
+}
+.left {
+  float: left;
+  padding-left: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  letter-spacing: 10px;
+  font-size: 18px;
 }
 
-.aalink {
-  color: rgb(207, 102, 63);
-  text-decoration: none;
+@media screen and (max-width: 480px) and (min-width: 100px) {
+  .left {
+  font-size: 14px;
+  }
 }
 
-.aalink:hover {
-  text-decoration: none;
-  color: rgb(255, 0, 0);
+.right {
+  margin-left: 20%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+}
+.wrap {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.sal {
-  font-family: "Vampiro One", cursive;
-}
-
-.r-link {
-  display: var(--rLinkDisplay, inline-flex) !important;
-}
-
-.r-link[href] {
-  color: var(--rLinkColor) !important;
-  text-decoration: var(--rLinkTextDecoration, none) !important;
-}
-
-.text-underlined {
-  /*
-        1. I use pixels units because others units (em, rem, vw, vh, etc) can
-        lead to the mistake of displaying a circumcised line
-    */
-
-  --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
-  --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, 0.5rem);
-  --uiTextUnderlinedPaddingBottom: calc(
-    var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap)
-  );
-
-  padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
-  position: var(--textUnderlinedPosition, relative) !important;
-  z-index: var(--textUnderlinedZindex, 1) !important;
-}
-
-.text-underlined::after {
-  content: "";
-  width: var(--textUnderlinedLineWidht, 100%) !important;
-  height: var(--uiTextUnderlinedLineHeight) !important;
-  background-image: var(
-    --textUnderlinedBackgroundImage,
-    linear-gradient(
-      to top,
-      var(--textUnderlinedLineColor, currentColor) 30%,
-      rgba(0, 0, 0, 0) 45%
-    )
-  ) !important;
-
+.page h2 {
   position: absolute;
-  left: var(--textUnderlinedLineLeft, 0) !important;
-  bottom: var(--textUnderlinedLineBottom, 0) !important;
-  z-index: var(--textUnderlinedLineZindex, -1) !important;
+  font-size: 42px;
+  font-weight: 300;
+  top: -24px;
 }
 
-/*
-=====
-CORE
-=====
-*/
-
-.link {
-  --textUnderlinedLineHeight: 100%;
-  --textUnderlinedLineGap: 0;
-  --textUnderlinedLineColor: #fed330;
-
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.vl {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  height:300px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
 }
 
-.link::after {
-  will-change: width;
-  transition: width 0.1s ease-out;
-  transform: rotate(-2deg);
-  transform-origin: left bottom;
+.footer {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: whitesmoke;
 }
 
-.link:hover {
-  --textUnderlinedLineWidht: 0;
+.aalink{
+  color:FAFF00;
+  font-family: 'Montserrat';
+  font-size: 24px;
+  font-weight: 600;
+}
+.aalink:hover{
+  color: #00E0FF;
+  text-decoration: none;
 }
 
-.link:hover::after {
-  transition-duration: 0.15s;
+.date{
+  color: rgb(161, 161, 161);
 }
-
-/*
-* These styles for text decoration. The demo will be work without it
-*/
-
-.link {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.link:focus {
-  outline: 2px solid #fed330;
-  outline-offset: 0.5rem;
-}
-
-/*
-=====
-DEMO
-=====
-*/
-
-:root {
-  --rLinkColor: #222;
-}
-
-/* Look here */

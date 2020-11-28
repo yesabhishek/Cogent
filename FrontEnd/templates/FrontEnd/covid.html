@@ -1,153 +1,92 @@
 {% extends "FrontEnd/base.html" %} {% block content %}
-<h6>{{todaydate}}</h6>
+<div class="container"><h6 class="date">{{todaydate}}, IST</h6></div>
+
 <section class="covid_heading">
-  
-  <div class="container covid_heading">
-   
-    <p>
-      <h1>Top Ten Countries worst hit by Covid-19</h1>
-      
-    </p>
+  <div class="container">
+    <h1>Top 10 Countries worst hit by Covid-19</h1>
+    <hr />
+    <canvas id="myChart" width="400" height="140"></canvas>
   </div>
 </section>
 
-<div>
-  <!--  <div
-    
-    style="
-      float: left;
-      max-height: 650px;
-      max-width: 400px;
-      overflow: scroll;
-      overflow-x: hidden;
-    "
-  >
-    <div style="background-color: rgb(41, 41, 40)">
-      <span style="color: rgb(255, 255, 255); text-align: center"
-        ><h2>Total Infected: {{overallCount}}</h2></span
-      >
-    </div>
-    <div class="col-lg-6">
-      <form method="post" enctype="multipart/form-data" action="selectCountry">
-        {% csrf_token %}
-        <div class="col-lg-4" style="float: left">
-          {% for con in uniqueCountryNames %}
-          <table style="border-width: 2px; border: #333">
-            <tr>
-              <input
-                type="submit"
-                value="{{con}}"
-                name="countryName"
-                style="width: 200px"
-              />
-            </tr>
-          </table>
-          {% endfor %}
-        </div>
-        <div style="float: left">
-          <canvas id="myChart" style="height: 6650px; width: 360px"></canvas>
-        </div>
-      </form>
-    </div>
-  
-
-  <!--   -->
-
-
-  
-  <ol>
-    {% for con in CountryList %}
-    <li>{{con}}</li>
-
-    {% endfor %}
-    
-  </ol>
-</br> 
-
-  <div class="container covid_heading">
-    <p>
-      <h1>Total new cases in these ten Countries Today </h1>
-      
-    </p>
-  </div>
+<br /><br />
+<div class="container">
+  <h1>Total new cases in the above ten Countries, Today!</h1>
+  <hr />
   <ul>
-    {% for daily in DailyConfirmed %}
-    {% if daily < 0 %}
-    <li>Waiting for source to load Data for today's ODATE! </li>
+    {% for daily in DailyConfirmed %} {% if daily < 0 %}
+    <li>Waiting for source to load Data for today's ODATE!</li>
     {% else %}
-    <li>{{daily}}</li>
-    {% endif %}
-    {% endfor %}
-    
+    <li>+ {{daily}}</li>
+    {% endif %} {% endfor %}
   </ul>
-</br>
-<div class="container covid_heading">
-  <p>
-    <h1>Graphical Representation of World's Top Ten Covid-19 Infected Cases</h1>
-    
-  </p>
 </div>
-</br>
-  <canvas id="myChart" width="400" height="180"></canvas>
+
 <script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
+  var ctx = document.getElementById("myChart").getContext("2d");
+  var myChart = new Chart(ctx, {
+    type: "horizontalBar",
     data: {
-        labels:   ['US', 'India', 'Brazil', 'Russia', 'Argentina', 'Colombia', 'Spain', 'Peru', 'Mexico', 'France'],
-        datasets: [{
-            label : ['Total Infected Cases'],
-            barThickness: 2,
-            maxBarThickness: 4,
-            data: [8154594,
- 7550273,
- 5224362,
- 1390824,
- 989680,
- 959572,
- 936560,
- 865549,
- 851227,
- 843471],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgba(255,0,0,0.2)',
-                'rgba(0,51,255,0.2)',
-                'rgba(51,255,0,0.2)',
-                'rgba(255,0,255,0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)',
-                'rgba(255,0,0,1)',
-                'rgba(0,51,255,1)',
-                'rgba(51,255,0,1)',
-                'rgba(255,0,255,1)'
-            ],
-            borderWidth: 1.2
-        }]
+      labels: [
+        "US",
+        "India",
+        "Brazil",
+        "Russia",
+        "Argentina",
+        "Colombia",
+        "Spain",
+        "Peru",
+        "Mexico",
+        "France",
+      ],
+      datasets: [
+        {
+          label: ["Total Infected Cases"],
+          barThickness: 2,
+          maxBarThickness: 4,
+          data: [
+            8154594,
+            7550273,
+            5224362,
+            1390824,
+            989680,
+            959572,
+            936560,
+            865549,
+            851227,
+            843471,
+          ],
+          backgroundColor: [
+            "red",
+            "#CCFF66",
+            "#5D2E8C",
+            "#2EC4B6",
+            "#D30C7B",
+            "#512500",
+            "#DD4B1A",
+            "#2B9EB3",
+            "#E71D36",
+            "#E28413",
+          ],
+          
+          borderWidth: 1.2,
+        },
+      ],
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
 </script>
 
-</br>
+<br />
 
 {% endblock %}

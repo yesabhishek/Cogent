@@ -1,16 +1,17 @@
 {% extends "FrontEnd/base.html" %} {% block content %}
 <section>
-  <div class="nheading" align="center">
+  <div class="container" align="center">
     <h1>Dashboard</h1>
     <hr />
   </div>
 </section>
 <br />
+
 <section>
-  <div class="nheading">
+  <div class="container">
     <h1>Show Details</h1>
+    <h6>Total Shows: {{TotalDirectors}}</h6>
   </div>
-  <h6>Total Shows: {{TotalDirectors}}</h6>
 
   <div class="directors">
     <!--  <p>Get all Directors List, <a href="#" class="aalink">Click here</a></p> -->
@@ -27,11 +28,12 @@
 
 <br />
 <section>
-  <div class="nheading">
+  <div class="container">
     <h1>Growth of Netlfix per year</h1>
     <hr />
+    <canvas id="myChart" width="400" height="180"></canvas>
   </div>
-  <canvas id="myChart" width="400" height="180"></canvas>
+
   <script>
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
@@ -67,11 +69,12 @@
 <br />
 <br />
 <section>
-  <div class="nheading">
+  <div class="container">
     <h1>Frequency of Users on Netflix</h1>
     <hr />
+    <canvas id="frequency" width="400" height="180"></canvas>
   </div>
-  <canvas id="frequency" width="400" height="180"></canvas>
+
   <script>
     var ctx = document.getElementById("frequency");
     var myChart = new Chart(ctx, {
@@ -122,12 +125,13 @@
 </section>
 <br /><br />
 <section>
-  <div class="nheading">
+  <div class="container">
     <h1>Netflix Vs Other Steaming Sites</h1>
     <hr />
+    <canvas id="netlixvs" width="400" height="180"></canvas>
     <br />
   </div>
-  <canvas id="netlixvs" width="400" height="180"></canvas>
+
   <script>
     var ctx = document.getElementById("netlixvs");
     var myChart = new Chart(ctx, {
@@ -163,11 +167,12 @@
   <br /><br />
   <br /><br />
   <section>
-    <div class="nheading">
+    <div class="container">
       <h1>Viewership</h1>
       <hr />
+      <canvas id="vship" width="400" height="180"></canvas>
     </div>
-    <canvas id="vship" width="400" height="180"></canvas>
+
     <script>
       var ctx = document.getElementById("vship");
       var myChart = new Chart(ctx, {
@@ -221,83 +226,84 @@
     <br /><br />
     <br /><br />
     <section>
-      <div class="nheading">
+      <div class="container">
         <h1>Netflix Programs sorted in Years📺</h1>
         <hr />
+        <small>Coming Soon!</small>
+        <br />
+        <div class="card-deck">
+          <div class="card directors">
+            <div class="card-body">
+              <a class="card-title aalink" href="#">2008</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2009</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2010</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="card-deck">
+          <div class="card directors">
+            <div class="card-body">
+              <a class="card-title aalink" href="#">2011</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2012</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2013</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="card-deck">
+          <div class="card directors">
+            <div class="card-body">
+              <a class="card-title aalink" href="#">2014</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2015</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2016</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="card-deck">
+          <div class="card directors">
+            <div class="card-body">
+              <a class="card-title aalink" href="#">2017</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2018</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body directors">
+              <a class="card-title aalink" href="#">2019</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <small>Coming Soon!</small>
-      <br />
-      <div class="card-deck">
-        <div class="card directors">
-          <div class="card-body">
-            <a class="card-title aalink" href="#">2008</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2009</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2010</a>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="card-deck">
-        <div class="card directors">
-          <div class="card-body">
-            <a class="card-title aalink" href="#">2011</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2012</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2013</a>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="card-deck">
-        <div class="card directors">
-          <div class="card-body">
-            <a class="card-title aalink" href="#">2014</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2015</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2016</a>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="card-deck">
-        <div class="card directors">
-          <div class="card-body">
-            <a class="card-title aalink" href="#">2017</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2018</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body directors">
-            <a class="card-title aalink" href="#">2019</a>
-          </div>
-        </div>
-      </div>
+
       <br />
       <br />
     </section>

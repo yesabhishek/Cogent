@@ -1,18 +1,24 @@
 {% extends "FrontEnd/base.html" %} {% block content %} {% load static %}
-<section id="hero">
-  <div class="herodiv">
-    <img
-      class="heroimg"
-      src="{% static 'FrontEnd/images/svg/herotitle.svg' %}"
-    />
+<section>
+  <div class="container">
+    <div class="row">
+      <div  class="left-text col-lg-6 col-md-6 col-sm-12 col-xs-12" style="padding-top: 2rem;">
+       <h1>Welcome to <strong>Cogent</strong></h1>
+       <p class="h5" style="line-height: 2rem;">Visualize your boring <span class="text-primary">data</span>  with us and help your business grow. We help our clients understand their data by providing them meaningful insights using the data.</p>
+        <a
+        class="btn btn-primary"
+        
+        href="https://www.linkedin.com/in/yesabhishek/"
+        >Contact Us </a
+      >
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      
+        <img src="{% static 'FrontEnd/svg/data_ana.svg' %}" alt="" width="120%">
+      </div>
+    </div>
   </div>
-  <div class="contact">
-    <a
-      class="contactimg btn btn-primary"
-      href="https://www.linkedin.com/in/yesabhishek/"
-      >Contact Us </a
-    >
-  </div>
+
 </section>
 <section id="about">
   <div class="page container">

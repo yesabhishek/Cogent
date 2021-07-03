@@ -16,7 +16,7 @@ body::-webkit-scrollbar-thumb {
 
 .heroimg {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1200px;
   left: 114px;
   top: 220px;
   align-content: left;
@@ -253,4 +253,13 @@ footer p {
   width: 20px;
   height: 20px;
   text-align: center;
+}
+
+.hero{
+  
+}
+@media screen and (max-width: 480px) and (min-width: 100px) {
+.hero {
+  visibility: hidden;
+}
 }

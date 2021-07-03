@@ -8,7 +8,7 @@ SECRET_KEY = "baf011806584e5915bef64c3b223217ac816e51105541666"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['cogent.herokuapp.com']
+ALLOWED_HOSTS = ['cogent.herokuapp.com','*']
 # 'cogent.herokuapp.com'
 
 SVG_DIRS = [
@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'FrontEnd',
     'svg',
+    'fontawesome-free',
 ]
 
 MIDDLEWARE = [

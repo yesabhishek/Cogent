@@ -1,37 +1,79 @@
-{% extends "FrontEnd/base.html" %} {% block content %}
+{% extends "FrontEnd/base.html" %} 
+{% block content %}
 <section>
-  <div class="container" align="center">
-    <h1>Dashboard</h1>
-    <hr />
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Shows</div>
+                <div class="h1 mb-0 font-weight-bold text-gray-800">39k</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-play-circle fa-3x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-dark shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Duration</div>
+                <div class="h1 mb-0 font-weight-bold text-gray-800">39 million hours</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-clock fa-3x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Net worth</div>
+                <div class="h1 mb-0 font-weight-bold text-gray-800">2.761 billion</div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-dollar-sign fa-3x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-dark shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Stock price</div>
+                <div class="h1 mb-0 font-weight-bold text-gray-800">533.98 USD <small>+0.44 (0.082%)today</small></div>
+              </div>
+              <div class="col-auto">
+                <i class="fas fa-arrow-up fa-3x text-gray-300"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-<br />
 
 <section>
   <div class="container">
-    <h1>Show Details</h1>
-    <h6>Total Shows: {{TotalDirectors}}</h6>
-  </div>
-
-  <div class="directors">
-    <!--  <p>Get all Directors List, <a href="#" class="aalink">Click here</a></p> -->
-  </div>
-  <br />
-  <br />
-</section>
-
-<!-- <ol>
-{% for directors in directornames %}
-<li>{{directors}}</li>
-{% endfor %}
-</ol> -->
-
-<br />
-<section>
-  <div class="container">
-    <h1>Growth of Netlfix per year</h1>
-    <hr />
-    <canvas id="myChart" width="400" height="180"></canvas>
+    <h2><strong>Growth</strong></h2>
+    <br>
+    <div class="card" style="background-color: rgba(4, 14, 70, 0.699); padding: 4rem 4rem">
+      <canvas id="myChart" width="600" height="180"></canvas>
+    </div>
   </div>
 
   <script>
@@ -42,10 +84,11 @@
         labels: ["2015", "2016", "2017", "2018", "2019"],
         datasets: [
           {
-            label: "Growth of Netflix",
+            label: "Growth per Year",
             data: [27.4, 41.2, 57.8, 80.8, 106.8],
-            backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-            borderColor: ["rgba(255, 99, 132, 1)"],
+            backgroundColor: ["#eeea00"],
+            defaultFontColor: 'white',
+            borderColor: ["#eeea00"],
             borderWidth: 2.5,
           },
         ],
@@ -63,16 +106,15 @@
       },
     });
   </script>
-  <br />
-  <br />
 </section>
-<br />
-<br />
+
 <section>
   <div class="container">
-    <h1>Frequency of Users on Netflix</h1>
-    <hr />
-    <canvas id="frequency" width="400" height="180"></canvas>
+    <h2><strong>Usage</strong></h2>
+    <br>
+    <div class="card" style="background-color: rgba(4, 14, 70, 0.699); padding: 4rem 4rem">
+      <canvas id="frequency" width="400" height="180"></canvas>
+    </div>
   </div>
 
   <script>
@@ -92,18 +134,11 @@
             label: "Frequency",
             data: [46, 26, 14, 11, 13],
             backgroundColor: [
-              "rgba(255,0,255,0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(255, 206, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-            ],
-            borderColor: [
-              "rgba(255, 99, 132, 1)",
-              "rgba(54, 162, 235, 1)",
-              "rgba(255, 206, 86, 1)",
-              "rgba(75, 192, 192, 1)",
-              "rgba(255,0,255,1)",
+              "red",
+              "green",
+              "white",
+              "orange",
+              "cyan",
             ],
             borderWidth: 1.5,
           },
@@ -123,12 +158,14 @@
     });
   </script>
 </section>
-<br /><br />
+
 <section>
   <div class="container">
-    <h1>Netflix Vs Other Steaming Sites</h1>
-    <hr />
+    <h2><strong>Netflix Vs Other Streaming Sites</strong></h2>
+    <br />
+    <div class="card" style="background-color: rgba(4, 14, 70, 0.699); padding: 4rem 4rem">
     <canvas id="netlixvs" width="400" height="180"></canvas>
+    </div>
     <br />
   </div>
 
@@ -143,19 +180,11 @@
             label: "market Share",
             data: [192.0, 147.5, 88.7, 55.0, 17.1],
             backgroundColor: [
-              "rgba(0,51,255,0.2)",
-
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255,0,0,0.2)",
-            ],
-            borderColor: [
-              "rgba(0,51,255,1)",
-              "rgba(75, 192, 192, 1)",
-              "rgba(153, 102, 255, 1)",
-              "rgba(255, 159, 64, 1)",
-              "rgba(255,0,0,1)",
+              "green",
+              "cyan",
+              "orange",
+              "blue",
+              "red",
             ],
             borderWidth: 1.5,
           },
@@ -164,15 +193,15 @@
       options: {},
     });
   </script>
-  <br /><br />
-  <br /><br />
+  </section>
   <section>
     <div class="container">
-      <h1>Viewership</h1>
-      <hr />
-      <canvas id="vship" width="400" height="180"></canvas>
+      <h2><strong>Viewership</strong></h2>
+      <br />
+      <div class="card" style="background-color: rgba(4, 14, 70, 0.699); padding: 4rem 4rem">
+        <canvas id="vship" width="400" height="180"></canvas>
+      </div>
     </div>
-
     <script>
       var ctx = document.getElementById("vship");
       var myChart = new Chart(ctx, {
@@ -188,23 +217,15 @@
           ],
           datasets: [
             {
-              label: "Viewership in percentages",
+              label: "Viewership in percentage  ",
               data: [12, 18, 18, 19, 16, 17],
               backgroundColor: [
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(54, 162, 235, 0.2)",
-                "rgba(255, 206, 86, 0.2)",
-                "rgba(75, 192, 192, 0.2)",
-                "rgba(153, 102, 255, 0.2)",
-                "rgba(255, 159, 64, 0.2)",
-              ],
-              borderColor: [
-                "rgba(255, 99, 132, 1)",
-                "rgba(54, 162, 235, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(75, 192, 192, 1)",
-                "rgba(153, 102, 255, 1)",
-                "rgba(255, 159, 64, 1)",
+                "orange",
+                "yellow",
+                "blue",
+                "white",
+                "cyan",
+                "green",
               ],
               borderWidth: 1.5,
             },
@@ -223,11 +244,10 @@
         },
       });
     </script>
-    <br /><br />
-    <br /><br />
-    <section>
+  </section>
+  <section>
       <div class="container">
-        <h1>Netflix Programs sorted in Years📺</h1>
+        <h2><strong> Program Report 📺</strong></h2>
         <hr />
         <small>Coming Soon!</small>
         <br />
@@ -303,11 +323,5 @@
           </div>
         </div>
       </div>
-
-      <br />
-      <br />
     </section>
-
-    {% endblock %}
-  </section>
-</section>
+{% endblock %}

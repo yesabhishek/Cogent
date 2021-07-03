@@ -1,21 +1,10 @@
 {% load static %}
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'FrontEnd/css/style.css' %}"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{% static 'FrontEnd/css/bootstrap.css' %}"
-/>
-
-<link rel="preconnect" href="https://fonts.gstatic.com" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,600&family=Poppins:ital,wght@0,700;1,600&display=swap"
-  rel="stylesheet"
-/>
-
+<link rel="stylesheet" type="text/css" href="{% static 'FrontEnd/css/style.css' %}"/>
+<link  rel="stylesheet"  type="text/css"  href="{% static 'FrontEnd/css/bootstrap.css' %}"/>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Poppins:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -25,51 +14,22 @@
 <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
 
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css"
-/>
+<link rel="stylesheet"  type="text/css"  href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css"/>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="{% static 'FrontEnd/images/logomedium.png' %}"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="{% static 'FrontEnd/images/logosmall.png' %}"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="{% static 'FrontEnd/images/logoextrasmall.png' %}"
-/>
-
+<link  rel="apple-touch-icon"  sizes="180x180"  href="{% static 'FrontEnd/images/logomedium.png' %}"/>
+<link  rel="icon"  type="image/png"  sizes="32x32"  href="{% static 'FrontEnd/images/logosmall.png' %}"/>
+<link  rel="icon"  type="image/png"  sizes="16x16"  href="{% static 'FrontEnd/images/logoextrasmall.png' %}"/>
+<script src="{% static 'fontawesome_free/js/all.min.js' %}"></script>
+<link href="{% static 'fontawesome_free/css/all.min.css' %}" rel="stylesheet" type="text/css">
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Cogent</title>
   </head>
   <body data-theme="light">
-    <!-- Navbar code starts here -->
-
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand logo alink light" href="{% url 'Home' %}"
-        >Cogent
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <a class="navbar-brand logo alink light" href="{% url 'Home' %}">Cogent</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"  aria-controls="navbarNavDropdown"  aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -77,56 +37,125 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'Home' %}">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home' %}#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home' %}#feature">Feature</a>
+          </li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle header"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Analytics
-            </a>
-
+            <a class="nav-link dropdown-toggle header" href="#" id="navbarDropdown" role="button"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Samples ⚡</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{% url 'Covid' %}"
-                >Covid-19 Dashboard</a
-              >
-              <a class="dropdown-item" href="{% url 'Netflix' %}"
-                >Netflix Dashboard</a
-              >
+              <a class="dropdown-item" href="{% url 'Netflix' %}">Netflix Dashboard</a>
+              <a class="dropdown-item" href="{% url 'Covid' %}">Covid-19 Report</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link header" href="https://github.com/yesabhishek"
-              >GitHub</a
-            >
+            <a class="btn btn-primary" href="https://github.com/yesabhishek"><strong>GitHub</strong></a>
           </li>
         </ul>
       </div>
     </nav>
-    <!-- Navbar code ends here -->
-
-    <br />
-    <br />
-
     {% block content %} {% endblock %}
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <footer class="footer">
+      <div class="container bottom_border">
+      <div class="row">
+      <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+      <h4 class="headin5_amrc col_white_amrc pt2"><strong>Cogent</strong></h4>
+      <!--headin5_amrc-->
+      <p class="mb10">Visualize your boring data.</p>
+      <br>
+      <p><i class="fa fa-phone"></i>  +91-879 705 3871  </p>
+      <p><i class="fa fa fa-envelope"></i> choudhuryabhishek76@gmail.com </p>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
+      </div>
+      <div class=" col-sm-4 col-md  col-6 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Samples</h5>
+      <!--headin5_amrc-->
+      <ul class="footer_ul_amrc">
+      <li><a href="{% url 'Netflix' %}">Netflix Dashboard</a></li>
+      <li><a href="{% url 'Covid' %}">Covid-19 Report</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-6 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Support</h5>
+      <!--headin5_amrc-->
+      <ul class="footer_ul_amrc">
+      <li><a href="#">Terms & Condition</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <!--footer_ul_amrc ends here-->
+      </div>
+      
+      
+      <div class=" col-sm-4 col-md  col-12 col">
+      <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+      <!--headin5_amrc ends here-->
+      
+      <ul class="footer_ul_amrc">
+      <li><a href="#">GitHub </a></li>
+     </ul>
+      
+      </div>
+      </div>
+      </div>
+      
+      
+      <div class="container">
+      <!-- <ul class="foote_bottom_ul_amrc">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+      </ul> -->
+      <!--foote_bottom_ul_amrc ends here-->
+      <br>
+      <p class="text-center">Copyright @2021 | Designed With by <a href="#">Cogent</a></p>
+      
+      <ul class="social_footer_ul">
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      </ul>
+      <!--social_footer_ul ends here-->
+      </div>
+      <br>
+      </footer>
+      
+    <script>
+      let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>

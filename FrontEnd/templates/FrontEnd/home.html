@@ -1,51 +1,352 @@
 {% extends "FrontEnd/base.html" %} {% block content %} {% load static %}
 <section id="hero">
   <div class="herodiv">
-    {% load static %}
     <img
       class="heroimg"
       src="{% static 'FrontEnd/images/svg/herotitle.svg' %}"
     />
   </div>
   <div class="contact">
-    <a href="https://www.linkedin.com/in/yesabhishek/"
-      ><img
-        class="contactimg"
-        src="{% static 'FrontEnd/images/svg/contact.svg' %}"
-    /></a>
+    <a
+      class="contactimg btn btn-primary"
+      href="https://www.linkedin.com/in/yesabhishek/"
+      >Contact Us </a
+    >
   </div>
 </section>
-<br /> <br /> <br /> <br /> <br /> <br />
-<section>
+<section id="about">
   <div class="page container">
     <div class="wrap">
-      <h1>About</h1>
+      <h1><strong>How we work</strong></h1>
       <br />
       <div class="aboutpara">
-        <p class="first">What we actually do with the Data?</p>
-        <p class="second">Well, below are the steps in brief.</p>
+        <p class="first">What we do with Data ?</p>
+        <p class="second">Well, below are the steps in action🚀</p>
       </div>
       <br />
       <img class="cards" src="{% static 'FrontEnd/images/svg/cards.svg' %}" />
     </div>
   </div>
 </section>
-
-<div class="page container">
-  <div class="left">
-    <h3>Data VISUALIZATION</h3>
+<section id="feature">
+  <div class="container">
+    <h1><strong>Feature</strong></h1>
     <br />
-    <h3>Data ANALYTICS</h3>
+    <p class="fs-2">
+      Our cutting edge technology helps clients with their business.
+    </p>
+    <br /><br />
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/dashboardicon.png' %}"
+              alt="Dashboard"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base"></h3>
+            <h3 class="pt-3 lh-base">Dashboard</h3>
+            <p class="mb-0">
+              Simple and easy to understand Dashboard with all the details
+              intact. Keeping everything at one place and concise.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/comment.png' %}"
+              alt="Comment"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base"></h3>
+            <h3 class="pt-3 lh-base">High spectrum</h3>
+            <p class="mb-0">
+              With the help of the data, we can predict and produce meaningful
+              datasets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/trilored.png' %}"
+              alt="Tailored"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base">Tailored</h3>
+            <p class="mb-0">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+              expedita dolores doloremque praesentium reprehenderit aperiam
+              alias repellendus quos recusandae et ducimus tempora voluptatibus
+              unde rerum ipsum, nulla minus earum. Tempore.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/statistics.png' %}"
+              alt="Statistic"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base">Statistic</h3>
+            <p class="mb-0">
+              A pseudo-Latin text used in web design, layout, and printing in
+              place of things to emphasise layouts for previewing layouts and
+              visual mockups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/profile.png' %}"
+              alt="Profiles"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base">Profiles</h3>
+            <p class="mb-0">
+              A pseudo-Latin text used in web design, layout, and printing in
+              place of things to emphasise layouts for previewing layouts and
+              visual mockups.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="p-5">
+            <img
+              src="{% static 'FrontEnd/assets/img/gallery/folder.png' %}"
+              alt="Folders"
+              style="width: 48px; height: 48px"
+            />
+            <h3 class="pt-3 lh-base">Folders</h3>
+            <p class="mb-0">
+              A pseudo-Latin text used in web design, layout, and printing in
+              place of things to emphasise layouts for previewing layouts and
+              visual mockups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="vl"></div>
-  <div class="right">
-    <img class="toolsimg" src="{% static 'FrontEnd/images/svg/tools.svg' %}" />
-  </div>
-</div>
+  <!-- end of .container-->
+</section>
 
-<div class="footer">
-  <img src="{% static 'FrontEnd/images/svg/footer.svg' %}" />
-</div>
+<section class="mt-5">
+  <div class="container">
+    <div class="text-center">
+      <h1>Help businesses</h1>
+    </div>
+    <br><br><br><br>
+    <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
+      <div class="col-md-7 col-lg-6 order-md-1">
+        <img
+          src="{% static 'FrontEnd/assets/img/gallery/comment1.png' %}"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <h3><strong>How does it work?</strong></h3>
+        <small>
+          Our landing page template works on all devices, so you only have to
+          set it up once, and get beautiful results.
+        </small>
+      </div>
+    </div>
+    <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
+      <div class="col-md-7 col-lg-6 false">
+        <img
+          class="w-100"
+          src="{% static 'FrontEnd/assets/img/gallery/comment2.png' %}"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <h3><strong>Analytics</strong></h3>
+        <small>
+          Our landing page template works on all devices, so you only have to
+          set it up once, and get beautiful results.
+        </small>
+      </div>
+    </div>
+    <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
+      <div class="col-md-7 col-lg-6 order-md-1">
+        <img
+          class="w-100"
+          src="{% static 'FrontEnd/assets/img/gallery/comment3.png' %}"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <h3><strong>Knowledge</strong></h3>
+        <small>
+          Our landing page template works on all devices, so you only have to
+          set it up once, and get beautiful results.
+        </small>
+      </div>
+    </div>
+  </div>
+  <!-- end of .container-->
+</section>
+
+<!-- <section>
+  <div class="container-lg">
+    <div class="text-center">
+      <h1 class="display-6 fw-semi-bold">Pricing</h1>
+    </div>
+    <div class="row flex-center">
+      <div class="card">
+        <div
+          class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9"
+        >
+          <p class="fs-2 ls-2">FREE</p>
+          <h1 class="display-4 ls-3"><span class="text-600">$</span>0</h1>
+          <hr class="hr mt-6 text-1000" />
+          <ul class="mt-5 ps-0">
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>7,000,000+
+              Events
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4 Custom
+              Domains
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>Dedicated
+              Support
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12 Months
+              History
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1 Dedicated
+              SSL
+            </li>
+          </ul>
+          <a
+            class="btn btn-gray mt-4"
+            href="https://www.linkedin.com/in/yesabhishek/"
+            >Contact Now <span class="fas fa-arrow-right"></span
+          ></a>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-0"
+        >
+          <p class="fs-2 ls-2">
+            BASIC <small><strong>(Coming soon)</strong></small>
+          </p>
+          <h1 class="display-4 ls-3"><span class="text-600">$</span>23</h1>
+          <hr class="hr mt-6 text-1000" />
+          <ul class="mt-5 ps-0">
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>7,000,000+
+              Events
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4 Custom
+              Domains
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>Dedicated
+              Support
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12 Months
+              History
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1 Dedicated
+              SSL
+            </li>
+          </ul>
+          <a
+            class="btn btn-gray mt-4"
+            href="mailto:=choudhuryabhishek76@gmail.com"
+            >Mail us <span class="fas fa-arrow-right"></span
+          ></a>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          class="py-5 px-4 px-md-3 px-lg-4 rounded-1 bg-800 plans-cards mt-md-9"
+        >
+          <p class="fs-2 ls-2">
+            PREMIUM <small><strong>(Coming soon)</strong></small>
+          </p>
+          <h1 class="display-4 ls-3"><span class="text-600">$</span>59</h1>
+          <hr class="hr mt-6 text-1000" />
+          <ul class="mt-5 ps-0">
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>7,000,000+
+              Events
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>4 Custom
+              Domains
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>Dedicated
+              Support
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>12 Months
+              History
+            </li>
+            <li class="pricing-lists">
+              <i class="fas fa-check-circle fa-lg me-2 text-600"></i>1 Dedicated
+              SSL
+            </li>
+          </ul>
+          <a
+            class="btn btn-gray mt-4"
+            href="mailto:=choudhuryabhishek76@gmail.com"
+            >Mail us <span class="fas fa-arrow-right"></span
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+<section>
+  <div class="container">
+    <div class="text-center text-xl-start">
+      <div class="card">
+        <div class="py-4">
+          <h2><strong>READY TO START</strong></h2>
+          <hr>
+          <p>
+            Start Your Free Trail Today
+          </p>
+          <center>
+            <a href="" class="btn btn-primary">Join Now</a>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
   var rellax = new Rellax(".rellax");
 </script>

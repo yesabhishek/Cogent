@@ -8,7 +8,7 @@ from datetime import timedelta
 today = datetime.datetime.now()
 currentdate = datetime.datetime.now() - datetime.timedelta(days=1)
 prevdate = datetime.datetime.now() - datetime.timedelta(days=2)
-#currdate = currentdate.strftime("%m"+"/"+"%d"+"/"+"%y")
+
 prevd = prevdate.strftime("%m"+"/"+"%d"+"/"+"%y")
 todaydate = today.strftime("%d %b, %Y")
 
@@ -24,19 +24,9 @@ def home(request):
     return render(request, 'FrontEnd/home.html')
 
 
-""" def covid(request):
-    return render(request, 'FrontEnd/covid.html')
-
- """
-
 
 def netflix(request):
-    TotalDirectors = len(directorlist)
-    directornames = raw_data['director'].unique()
-    context = {'TotalDirectors': TotalDirectors,
-               'directornames': directornames}
-
-    return render(request, 'FrontEnd/netflix.html', context)
+    return render(request, 'FrontEnd/netflix.html')
 
 
 def covid(request):
@@ -109,7 +99,6 @@ def getDataforMap(uniqueCOuntryName, df2):
             dataForMap.append(temp)
         except:
             pass
-    print(len(dataForMap))
     return dataForMap
 
 
@@ -132,7 +121,6 @@ def getHeatMapData(confirmedGlobal, contryNames):
 
 
 def drillDownACountry(request):
-    print(request.POST.dict())
     countryName = request.POST.get('countryName')
     confirmedGlobal = pd.read_csv(
         'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', encoding='utf-8', na_values=None)

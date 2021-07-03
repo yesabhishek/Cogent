@@ -1,26 +1,29 @@
 {% extends "FrontEnd/base.html" %} {% block content %}
-<div class="container"><h6 class="date">{{todaydate}}, IST</h6></div>
-
 <section class="covid_heading">
   <div class="container">
-    <h1>Top 10 Countries worst hit by Covid-19</h1>
+    <h2><strong>Top 10 Countries worst hit</strong></h2>
     <hr />
-    <canvas id="myChart" width="400" height="140"></canvas>
+    <div class="card" style="background-color: rgba(4, 14, 70, 0.699); padding: 4rem 4rem">
+      <canvas id="myChart" width="600" height="300"></canvas>
+    </div>
   </div>
 </section>
+<!-- <section>
+  <div class="container">
+    <h2><strong>Total new cases in top ten Countries, Today!</strong></h2>
+    <hr />
+    <ul>
+      {% for daily in DailyConfirmed %} 
+      {% if daily < 0 %}
+      <li>Waiting for source to load Data for today's ODATE!</li>
+      {% else %}
+      <li>+ {{daily}}</li>
+      {% endif %} 
+      {% endfor %}
+    </ul>
+  </div>
+</section> -->
 
-<br /><br />
-<div class="container">
-  <h1>Total new cases in the above ten Countries, Today!</h1>
-  <hr />
-  <ul>
-    {% for daily in DailyConfirmed %} {% if daily < 0 %}
-    <li>Waiting for source to load Data for today's ODATE!</li>
-    {% else %}
-    <li>+ {{daily}}</li>
-    {% endif %} {% endfor %}
-  </ul>
-</div>
 
 <script>
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -45,16 +48,8 @@
           barThickness: 2,
           maxBarThickness: 4,
           data: [
-            8154594,
-            7550273,
-            5224362,
-            1390824,
-            989680,
-            959572,
-            936560,
-            865549,
-            851227,
-            843471,
+            8154594, 7550273, 5224362, 1390824, 989680, 959572, 936560, 865549,
+            851227, 843471,
           ],
           backgroundColor: [
             "red",
@@ -68,7 +63,7 @@
             "#E71D36",
             "#E28413",
           ],
-          
+
           borderWidth: 1.2,
         },
       ],
@@ -86,7 +81,4 @@
     },
   });
 </script>
-
-<br />
-
 {% endblock %}

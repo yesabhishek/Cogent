@@ -12,3 +12,4 @@ whitenoise==5.2.0
 numpy==1.19.3
 pandas==1.1.4
 django-inline-svg==0.1.1
+fontawesome-free==5.15.3
